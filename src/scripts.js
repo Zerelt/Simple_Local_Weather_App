@@ -42,7 +42,7 @@ $(document).ready(function() {
             var city = $("#cityName").val();
             $("#tempF").attr("checked", "checked");
             if (city.length > 1) {
-              $.getJSON("https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=8dd6abbb435c2a67f45595e8e9ab4425", function(json2) {
+              $.getJSON("https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=69529e1042d73d1840a0a3583aa38731", function(json2) {
                 showTempC = (json2.main.temp - 273.15).toFixed(2);
                 showTempF = (json2.main.temp * 9 / 5 - 459.67).toFixed(2);
                 $("#tempF").prop("checked", "checked");
