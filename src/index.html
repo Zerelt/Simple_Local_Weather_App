@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <script src="./jquery/jquery-3.1.1.slim.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Marck+Script|Niconne|Pontano+Sans|Sintony|Comfortaa:400,300,700|Allan|Poiret+One|Gruppo|Overlock' rel='stylesheet' type='text/css'>
+    <link href='./style.css' rel='stylesheet' type='text/css'>
+    <script src='./scripts.js' type='text/javascript'></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+    <meta charset='UTF-8'>
+    <title>Local Weather App</title>
+</head>
+
+<body>
+    <h1>FCC Local Weather App (WIP)</h1>
+    <div id="temp" class="line">
+        <img id="weatherIcon" />
+        <div id=temp2> </div>
+        <br/>
+        <span> <label><input type='radio' name="Celsius" id="tempC"><span>&nbspºC</span></label>
+        </span>
+        <span> <label><input type='radio' name="Celsius" id="tempF" ><span> F</span></label>
+        </span>
+    </div>
+
+    <div id="box">
+
+        <div id="location" class="line"></div>
+        <div id="weather" class="line"></div>
+        <div id="wind" class="line"></div>
+
+    </div>
+    <p>Not your city? Input your city name below</p>
+    <div id="cityNameBox">
+        <label>
+      <input type="text" name="get city" id="cityName" placeholder="Your city name"> <button type="submit" id="cityBtn">Confirm</button>
+    </label>
+
+    </div>
+    <div id="locationMap"></div>
+
+</body>
+
+</html>

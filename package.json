@@ -1,0 +1,21 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "simple weather app using openweathermaps api, jquery and a bit of google maps",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dobre Alexandru",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.10",
+    "pump": "^1.0.1"
+  }
+}

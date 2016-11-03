@@ -1,0 +1,90 @@
+body{
+  font-family:Poiret One;
+  line-height:;
+  color:white;
+	background: url('./images/bgImage.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1 {
+  margin-top: 125px;
+  text-align: center;
+}
+
+#temp {
+  text-align: center;
+}
+
+#temp2 {
+  font-size: 35px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#weatherIcon {
+}
+
+span {
+  font-size: 20px;
+}
+
+label,input,span:hover {
+  cursor: pointer;
+}
+
+#box {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  background-color:;
+  display:flex; justify-content:space-between;
+  display: flex;
+  /*justify-content: space-around;*/
+}
+
+.line {
+  font-size: 25px;
+}
+
+p {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#cityNameBox {
+  max-width: 380px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cityName {
+  width: 300px;
+  height: 31px;
+  display:inline-block;
+}
+
+#cityBtn{
+  height:31px;
+  display:inline-block;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+
+#cityBtn:hover{
+  cursor:pointer;
+}
+
+#locationMap{
+  width:500px;
+  height:250px;
+  margin-top:32px;
+  margin-left:auto;
+  margin-right:auto;
+  border:1px solid white;
+}
