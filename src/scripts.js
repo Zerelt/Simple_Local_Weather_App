@@ -14,7 +14,7 @@ $(document).ready(function() {
         //position.coords.accuracy=10000; //any way to increase the accuracy ?
         var accuracy = position.coords.accuracy;
 
-        $.getJSON("https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?lat=" + x + "&lon=" + y + "&APPID=8dd6abbb435c2a67f45595e8e9ab4425", function(json) {
+        $.getJSON("https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?lat=" + x + "&lon=" + y + "&APPID=69529e1042d73d1840a0a3583aa38731", function(json) {
 
           /*note that the standard/default measuring unit for temperature that the openweather api uses is Kelvin;
           to get it to show the temperature in C or F you need to add &units=metric or &units=imperial after your api key;
