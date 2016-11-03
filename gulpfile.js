@@ -53,5 +53,5 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['imagemin']);
 });
 
-gulp.task('default', ['watch', 'minify',
+gulp.task('default', [/*'watch',*/ 'minify',
   'minify-css', 'uglify', 'imagemin']);
