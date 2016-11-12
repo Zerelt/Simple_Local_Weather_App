@@ -1,6 +1,5 @@
 body{
   font-family:Poiret One;
-  line-height:;
   color:white;
 	background: url('./images/bgImage.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -24,9 +23,6 @@ h1 {
   margin-right: auto;
 }
 
-#weatherIcon {
-}
-
 span {
   font-size: 20px;
 }
@@ -36,14 +32,18 @@ label,input,span:hover {
 }
 
 #box {
-  width: 40%;
+  max-width:730px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-  background-color:;
-  display:flex; justify-content:space-between;
-  display: flex;
-  /*justify-content: space-around;*/
+  display:flex;
+  justify-content:space-between;
+}
+
+#location,#weather,#wind{
+  width:33%;
+  text-align:center;
+  text-decoration:underline;
 }
 
 .line {
@@ -71,6 +71,7 @@ p {
 
 #cityBtn{
   height:31px;
+  max-width:50px;
   display:inline-block;
   box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -87,4 +88,53 @@ p {
   margin-left:auto;
   margin-right:auto;
   border:1px solid white;
+}
+
+@media (max-width:768px) {
+  h1{
+    margin-top:45px;
+  }
+  #box{
+    width:100%;
+    margin-top:30px;
+    display:block;
+  }
+  #location,#weather,#wind{
+    display:block;
+    width:100%;
+    margin:15px 0;
+  }
+  #locationMap{
+    width:99%;
+  }
+}
+
+@media (max-width:468px) {
+  #cityNameBox{
+    width:100%;
+    max-height:31px;
+    max-width:100%;
+    display:block;
+    height:100%;
+    overflow:hidden;
+    /*
+    overflow hidden to hide the extra border of the cityBtn;
+    this together with the border-width for the cityBtn
+    make the button and input field look properly aligned and
+    of the same height on different browsers,Firefox especially; 
+    */
+  }
+  #cityName{
+    width:70%;
+    height:33px;
+    padding-top:0px;
+  }
+  #cityBtn{
+    width:25%;
+    max-width:25%;
+    float:right;
+    margin:0;
+    padding:0;
+    border-width:0px thin 4px thin;
+  }
 }
