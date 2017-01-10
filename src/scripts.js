@@ -12,7 +12,7 @@ $(document).ready(function() {
             y = position.coords.longitude;
             var accuracy = position.coords.accuracy;
 
-            $.getJSON("https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?lat=" + x + "&lon=" + y + "&APPID=69529e1042d73d1840a0a3583aa38731", function(json) {
+            $.getJSON("https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=" + x + "&lon=" + y + "&APPID=69529e1042d73d1840a0a3583aa38731", function(json) {
 
                 /*note that the standard/default measuring unit for temperature that the openweather api uses is Kelvin;
           to get it to show the temperature in C or F you need to add &units=metric or &units=imperial after your api key;
@@ -29,7 +29,7 @@ $(document).ready(function() {
                     $("#temp2").text(showTempF + " F");
                 });
 
-                $("#weatherIcon").attr("src", "https://crossorigin.me/http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
+                $("#weatherIcon").attr("src", "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
                 $("#location").text(json.name + "," + json.sys.country);
                 $("#weather").text(json.weather[0].description);
                 $("#wind").text(json.wind.speed + " knots wind");
@@ -40,7 +40,7 @@ $(document).ready(function() {
                 var city = $("#cityName").val();
                 $("#tempF").attr("checked", "checked");
                 if (city.length > 1) {
-                    $.getJSON("https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=69529e1042d73d1840a0a3583aa38731", function(json2) {
+                    $.getJSON("https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=69529e1042d73d1840a0a3583aa38731", function(json2) {
                         showTempC = (json2.main.temp - 273.15).toFixed(2);
                         showTempF = (json2.main.temp * 9 / 5 - 459.67).toFixed(2);
                         $("#tempF").prop("checked", "checked");
@@ -51,7 +51,7 @@ $(document).ready(function() {
                         $("#tempF").click(function() {
                             $("#temp2").text(showTempF + " F");
                         });
-                        $("#weatherIcon").attr("src", "https://crossorigin.me/http://openweathermap.org/img/w/" + json2.weather[0].icon + ".png");
+                        $("#weatherIcon").attr("src", "http://openweathermap.org/img/w/" + json2.weather[0].icon + ".png");
                         $("#location").text(json2.name + "," + json2.sys.country);
                         $("#weather").text(json2.weather[0].description);
                         $("#wind").text(json2.wind.speed + " knots wind");
